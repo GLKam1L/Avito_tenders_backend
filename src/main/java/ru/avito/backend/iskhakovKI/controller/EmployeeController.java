@@ -7,9 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-/**
- * Контроллер для управления пользователями
- */
 @RestController
 @RequestMapping("/api/employees")
 public class EmployeeController {
@@ -24,6 +21,5 @@ public class EmployeeController {
         return ResponseEntity.ok(createdEmployee);
     }
 
-    // Другие методы (например, получение списка пользователей) можно добавить по мере необходимости
 }
 

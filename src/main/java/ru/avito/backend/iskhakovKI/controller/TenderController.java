@@ -18,6 +18,7 @@ public class TenderController {
     @Autowired
     private TenderService tenderService;
 
+    // Получение статуса тендера
     @GetMapping("/{tenderId}/status")
     public ResponseEntity<String> getTenderStatus(@PathVariable Long tenderId) {
         Optional<Tender> optionalTender = tenderService.getTenderById(tenderId);

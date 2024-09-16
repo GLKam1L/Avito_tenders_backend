@@ -7,9 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-/**
- * Контроллер для управления организациями
- */
 @RestController
 @RequestMapping("/api/organizations")
 public class OrganizationController {
@@ -29,5 +26,4 @@ public class OrganizationController {
         OrganizationResponsibleDto assignedResponsible = organizationService.assignResponsible(dto);
         return ResponseEntity.ok(assignedResponsible);
     }
-    // Другие методы (например, получение списка организаций) можно добавить по мере необходимости
 }
