@@ -16,9 +16,10 @@
 
 ### Бизнес-логика
 
-#### Тендер
+Были соблюдены все условия бизнес-логики, указанные в задании.
+#### Тендеры
 
-Тендеры могут создавать только пользователи от имени своей организации.
+Тендеры могут создавать только пользователи от имени своей организации:
 
 Доступные действия с тендером:
 
@@ -398,20 +399,3 @@ Response:
 
   Body: [ { ... }, { ... }, ... ]
 ```
-
-### Оценивание
-
-| Название группы    | Ручки                                  | Баллы | От каких групп зависит |
-|--------------------|----------------------------------------|-------|------------------------|
-| 01/ping            | - /ping                                | 1     |                        |
-| 02/tenders/new     | - /tenders/new                         | 2     |                        |
-| 03/tenders/list    | - /tenders<br>- /tenders/my            | 5     | - 02/tenders/new       |
-| 04/tenders/status  | - /tenders/status                      | 3     | - 02/tenders/new       |
-| 05/tenders/version | - /tenders/edit<br>- /tenders/rollback | 6     | - 02/tenders/new       |
-| 06/bids/new        | - /bids/new                            | 2     |                        |
-| 07/bids/decision   | - /bids/submit_decision                | 3/6   | - 06/bids/new          |
-| 08/bids/list       | - /bids/list<br>- /bids/my             | 5     | - 06/bids/new          |
-| 09/bids/status     | - /bids/status                         | 3     | - 06/bids/new          |
-| 10/bids/version    | - /bids/edit<br>- /bids/rollback       | 6     | - 06/bids/new          |
-| 11/bids/feedback   | - /bids/reviews<br>- /bids/feedback    | 7     | - 06/bids/new          |
-
